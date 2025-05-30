@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankit Kumar Sharma | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --light-bg: #ffffff;
+      --light-text: #1a1a1a;
+      --light-accent: #ff6b00;
+      --light-card: #f9f9f9;
+
+      --dark-bg: #121212;
+      --dark-text: #f0f0f0;
+      --dark-accent: #ffa366;
+      --dark-card: #1f1f1f;
+
+      --transition: 0.4s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      transition: background-color var(--transition), color var(--transition);
+    }
+
+    body.light {
+      background-color: var(--light-bg);
+      color: var(--light-text);
+    }
+
+    body.dark {
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1.5rem 2rem 0;
+    }
+
+    .toggle-btn {
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      background-color: transparent;
+      border: 2px solid;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    body.light .toggle-btn {
+      border-color: var(--light-accent);
+      color: var(--light-accent);
+    }
+
+    body.dark .toggle-btn {
+      border-color: var(--dark-accent);
+      color: var(--dark-accent);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .photo {
+      width: 160px;
+      height: 210px;
+      background-image: url('https://i.ibb.co/LXz57Qgz/Whats-App-Image-2025-05-14-at-17-10-48-7e0c82ad.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 6px;
+      border: 2px solid #ccc;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-block {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .info-block h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .info-block p {
+      font-size: 0.9rem;
+      color: inherit;
+      opacity: 0.85;
+    }
+
+    .main section {
+      margin-bottom: 2.5rem;
+    }
+
+    .main h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid currentColor;
+      font-weight: 600;
+    }
+
+    .card {
+      padding: 1.2rem;
+      border-radius: 10px;
+      transition: var(--transition);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    body.light .card {
+      background-color: var(--light-card);
+      border-left: 4px solid var(--light-accent);
+    }
+
+    body.dark .card {
+      background-color: var(--dark-card);
+      border-left: 4px solid var(--dark-accent);
+    }
+
+    .card ul {
+      padding-left: 1.5rem;
+      list-style-type: disc;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      color: gray;
+    }
+  </style>
+</head>
+<body class="light">
+  <nav>
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
+  </nav>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="photo"></div>
+      <div class="info-block">
+        <h2>Ankit Kumar Sharma</h2>
+        <p><strong>Email:</strong> ankit.aks2211@gmail.com</p>
+        <p><strong>Phone:</strong> 6296056441</p>
+        <p><strong>Location:</strong> Kolkata, India</p>
+      </div>
+    </aside>
+
+    <div class="main">
+      <section>
+        <h1>Profile</h1>
+        <div class="card">
+          Curious AI and ML Enthusiast with a strong foundation in Machine Learning, Data Science, and Backend Development—passionate about making machines smarter and improving lives. Proficient in NLP, Node.js, Flask, and Deep Learning.
+        </div>
+      </section>
+
+      <section>
+        <h1>Education</h1>
+        <div class="card">
+          <p><strong>IEM Kolkata:</strong> B.Tech CSE (AI) – CGPA 9.24</p>
+          <p><strong>BSF Sr. Sec. School:</strong> 92%</p>
+          <p><strong>Techno India Group Public School:</strong> 94%</p>
+        </div>
+      </section>
+
+      <section>
+        <h1>Projects</h1>
+        <div class="card">
+          <strong>Netflix-like Streaming Platform</strong>
+          <ul>
+            <li>Multi-user sync, chat, keyword recommendation</li>
+            <li>Tech: Node.js, Firebase, Socket.IO</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Medical Diagnostic Web App</strong>
+          <ul>
+            <li>ResNet CNN for blood/lung classification</li>
+            <li>Stack: Flask, TensorFlow, Streamlit</li>
+            <li>Paper under review at ELSEVIER</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h1>Skills</h1>
+        <div class="card">
+          <p><strong>ML/DL:</strong> Python, NLP, CNN, ResNet, RF, XGBoost</p>
+          <p><strong>Backend:</strong> Flask, Node.js, MongoDB</p>
+          <p><strong>Languages:</strong> Python, C++, JS, SQL, Java</p>
+          <p><strong>Tools:</strong> NumPy, Pandas, TensorFlow, Keras</p>
+        </div>
+      </section>
+
+      <section>
+        <h1>Certificates</h1>
+        <div class="card">
+          <ul>
+            <li>Google Data Analytics – Coursera</li>
+            <li>DBMS – NPTEL</li>
+            <li>DAA – NPTEL</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h1>Leadership</h1>
+        <div class="card">
+          Head of Operations – IEM Quizzard Club
+        </div>
+      </section>
+
+      <section>
+        <h1>Languages</h1>
+        <div class="card">English, Hindi, Bengali</div>
+      </section>
+
+      <section>
+        <h1>Hobbies</h1>
+        <div class="card">OSINT, Guitar</div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Ankit Kumar Sharma. Built with ❤️ using HTML & CSS.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      document.body.classList.toggle('light');
+    }
+  </script>
+</body>
+</html>
