@@ -38,7 +38,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a passionate Backend and AI Engineer with over 5 years of experience building 
+              I'm a  Backend and AI Engineer with over 5 years of experience building 
               scalable systems and intelligent solutions. My expertise spans from designing 
               robust microservices architectures to implementing cutting-edge machine learning models.
             </p>

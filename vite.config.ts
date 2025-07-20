@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 import { ghPages } from 'vite-plugin-gh-pages'; // Add this import
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? "/your-repo-name/" : "/", // Important for GH Pages
+  base: "/", // Important for GH Pages
   server: {
     host: "::",
     port: 8080,
