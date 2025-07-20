@@ -5,6 +5,26 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-subtle px-4">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
+        {/* Profile Photo Section */}
+        <div className="mb-8 flex justify-center">
+          <div className="relative group">
+            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-primary/30 shadow-glow">
+              {/* Replace this div with your actual photo */}
+              <div className="w-full h-full bg-gradient-primary flex items-center justify-center">
+                <span className="text-4xl md:text-5xl font-bold text-primary-foreground">JD</span>
+              </div>
+              {/* Uncomment and use this img tag when you have your photo */}
+              {/* <img 
+                src="/path-to-your-photo.jpg" 
+                alt="John Doe Profile Picture"
+                className="w-full h-full object-cover"
+              /> */}
+            </div>
+            {/* Optional: Animated border effect */}
+            <div className="absolute inset-0 rounded-full border-2 border-primary/50 animate-glow"></div>
+          </div>
+        </div>
+
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
             John Doe
